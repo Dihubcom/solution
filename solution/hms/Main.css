@@ -1,0 +1,90 @@
+*{
+    font-family:  'Segoe UI'
+}
+
+body{
+    background-color:#989bbdee;
+    color: #312899;
+}
+h1{
+    text-align:center;
+    font-family: 'Bowlby One SC, cursive';
+    margin-top:40px;
+    font-size:50px;
+}
+
+.imageFig{
+    margin-right:450px;
+    padding:0px;
+    border: 3px solid;
+    width:150px;
+    height: 150px;
+}
+
+.frmContainer{
+    margin-top: 20px;
+
+}
+
+.regheader{
+    margin-top: 50px;
+}
+
+.bodycont{
+    margin-top: 30px;
+}
+/* the hospital number and date registered section in  patient registration form*/
+
+.frm-date{
+    float: right;
+}
+
+/* user guide css*/
+.user-guide{ 
+    margin-top: 40px;
+    margin-right:40px;
+    width:100%;
+    margin-left:10px;
+    
+}
+
+.figcont{
+  margin: 0 auto;
+
+}
+thead{
+   background-color:  #291170;
+   color: white;
+}
+
+.submitbtn{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 50%;
+    background-color: #312899;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #312899;
+    color:white;
+    height:30px;
+    
+}
+.searchbar{
+    margin-bottom: 40px;
+}
+
+/* made the doctor assign button by the right*/
+
+.assignbtn{
+    float:right;
+    background-color: #312899;
+    
+}
+
+/* add certificate for user profile button*/
+.addcert{
+    float:right;
+}
+

@@ -1,0 +1,209 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>    
+ 
+<% if (messages.error) { %>
+    <p style="color:red"><%- messages.error %></p>
+<% } %>
+ 
+<% if (messages.success) { %>
+    <p style="color:green"><%- messages.success %></p>
+<% } %>
+ 
+ 
+      
+ <form action="/users/add" method="post" name="form1">
+        <!-- the form container -->
+        <div class="row">
+      
+      
+                <!-- free space by the left of the form -->
+                <div class="col-md-2">
+                </div>
+            
+                <!-- the form -->
+                <div class="col-md-8">
+            
+                  <div class="container frmContainer">
+            
+                    <div class="regheader">
+                      <h2 style="text-align: center; "> Patient Registration Form</h2>
+                    </div>
+            
+                    <!--the figure div -->
+                    <div class="figcont ">
+                      <div class="row">
+                          <div class="col-md-4">
+                              <figure class="imageFig">
+                                  
+                               </figure>
+                              <input class="hidden" type="file">    
+                          </div>
+                          <div class="col-md-8">
+                              <form class="frm-date">
+                                  
+                                                      <div class="form-group row">
+                                                          <label for="example-text-input" class="col-4 col-form-label">Date:</label>
+                                                          <div class="col-8">
+                                                              <input class="form-control" id="date" type="text" required="required"  readonly="readonly">
+                                                          </div>
+                                                      </div>
+                                  
+                                                      <div class="form-group row">
+                                                          <label for="example-text-input" class="col-4 col-form-label">Hosp No.:</label>
+                                                          <div class="col-8 ">
+                                                              <input class="form-control" name="sname" type="password" required="required" id="" readonly="readonly">
+                                                          </div>
+                                  
+                                                      </div>
+                                                  </form>
+                                  
+                          </div>
+                     
+                      </div>
+                  
+                      <fieldset>
+                        <legend> Personal data</legend>
+                        <div class="form-group row">
+                          <label for="example-text-input" class="col-1 col-form-label">Surname</label>
+                          <div class="col-5">
+                            <input class="form-control" name="surname" type="text" id="example-text-input" value="<%= surname %>">
+                          </div>
+                          <label for="example-search-input" class="col-2 col-form-label">First Name</label>
+                          <div class="col-4">
+                            <input class="form-control" type="text" name="name" id="name" value="<%= name %>">
+                          </div>
+            
+                        </div>
+            
+            
+                        <div class="form-group row">
+                          <label for="example-url-input" class="col-1 col-form-label">gender</label>
+                          <div class="col-2" name="gender">
+                            <label>  <input type="radio" name="gender" class="form-control" value=" female">female</label>
+                          
+                            <label> <input type="radio" name="gender" class="form-control" value="male">male</label>
+                           
+                          </div>
+                          <label for="example-url-input" class="col-1 col-form-label">Age</label>
+                          <div class="col-2">
+                            <input class="form-control"  type="number" name="age" value="<%= age %>" id="example-url-input">
+                          </div>
+                          <label for="example-password-input" class="col-2 col-form-label">Marital Status</label>
+                          <div class="col-4">
+                            <input class="form-control" name="maritalstatus" type="text" value="<%= maritalstatus%>" id="example-password-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-tel-input" class="col-2 col-form-label">Date Of Birth</label>
+                          <div class="col-3">
+                            <input class="form-control" name="DOB" type="date" value="<%= DOB %>" id="example-tel-input">
+                          </div>
+                          <label for="example-number-input" class="col-1 col-form-label">Tribe</label>
+                          <div class="col-2">
+                            <input class="form-control" name="tribe" type="text"  value="<%= tribe %>" id="example-number-input">
+                          </div>
+                          <label for="example-datetime-local-input" class="col-1 col-form-label">Religion</label>
+                          <div class="col-3">
+                            <input class="form-control" name="religion" type="text" value="<%= religion %>" id="example-datetime-local-input">
+                          </div>
+                        </div>
+            
+            
+                        <div class="form-group row">
+                          <label for="example-week-input" class="col-2 col-form-label">Phone Number</label>
+                          <div class="col-4">
+                            <input class="form-control" name="phoneNo" type="tel" value="<%= phoneNo %>" id="example-week-input">
+                          </div>
+                          <label for="example-time-input" class="col-2 col-form-label">Email Address</label>
+                          <div class="col-4"> 
+                            <input class="form-control" name="email" name="email" value="<%= email %>" id="example-time-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-month-input" class="col-2 col-form-label">Address</label>
+                          <div class="col-10">
+                            <input class="form-control" name="address"  value="<%= address %>" id="example-month-input">
+                          </div>
+                        </div>
+            
+            
+                        <div class="form-group row">
+                          <label for="example-color-input" class="col-2 col-form-label">Nationality</label>
+                          <div class="col-2">
+                            <input class="form-control" name="natoinality" type=""  value="<%= natoinality %>" id="example-color-input">
+                          </div>
+                          <label for="example-color-input"  class="col-1 col-form-label">State</label>
+                          <div class="col-3">
+                            <input class="form-control" name="state" type="" value="<%= state %>" id="example-color-input">
+                          </div>
+                          <label for="example-color-input" class="col-1 col-form-label">L.G.A</label>
+                          <div class="col-3">
+                            <input class="form-control" name="lga" type="" value="<%= lga %>" id="example-color-input">
+                          </div>
+            
+            
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-date-input" class="col-2 col-form-label">Occupation</label>
+                          <div class="col-10">
+                            <input class="form-control" name="occupation" type="text" value="<%= occupation %>" id="example-date-input">
+                          </div>
+                        </div>
+                      </fieldset>
+            
+                      <fieldset>
+                        <legend>Next Of Kin Information</legend>
+                        <div class="form-group row">
+                          <label for="example-text-input" class="col-2 col-form-label">Name</label>
+                          <div class="col-10">
+                            <input class="form-control" name="kinName" type="text" value="<%= kinName %>" id="example-text-input">
+                          </div>
+                        </div>
+            
+                        <div class="form-group row">
+                          <label for="example-color-input" class="col-2 col-form-label">Relationship</label>
+                          <div class="col-2">
+                            <input class="form-control" name="kinRelationship" type="text" id="example-color-input">
+                          </div>
+                          <label for="example-color-input"  class="col-2 col-form-label">Phone Number</label>
+                          <div class="col-2">
+                            <input class="form-control" name="kinPhone" type="tel" value="<%= kinPhone %>" id="example-color-input">
+                          </div>
+                          <label for="example-color-input" class="col-1 col-form-label">Email Address</label>
+                          <div class="col-3">
+                            <input class="form-control" name="kinEmail" type="email" value="<%= kinEmail %>" id="example-color-input">
+                          </div>
+                        </div>
+            
+            
+                        <div class="form-group row">
+                          <label for="example-email-input" class="col-2 col-form-label">Address</label>
+                          <div class="col-10">
+                            <input class="form-control" name="kinAddress" type="text"  value="<%= kinAddress %>" id="example-email-input">
+                          </div>
+                        </div>
+                      </fieldset>
+            
+                          <button type="submit" class="btn btn-lg btn-primary  btn-lg submitbtn">Submit</button>
+            
+                    </div>
+                  </div>
+            
+                  <!-- right contents  -->
+            
+                  <div class="col-md-2"></div>
+            
+            
+            
+                </div>
+              </div>
+            
+          </form>
+             
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>
